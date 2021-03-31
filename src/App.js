@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import MenuMakanan from "./components/MenuMakanan/MenuMakanan";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return ( 
+     <div className="App">
+       <h1 >Cafe and Resto Morningstar</h1>
+       <h2>Menu Makanan</h2>
+       <MenuMakanan />
+       <h2>Menu Minuman</h2>
+       <div style={{border: '1px solid black', width: 300, margin:'auto'}}>
+       <p>Nama Menu: Jus Melon</p>
+       <p>Harga: Rp. 15.000 </p>
+       </div>
+     </div>
+     
+    );
+  }
 }
 
 export default App;
